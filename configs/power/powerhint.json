@@ -1,0 +1,203 @@
+{
+    "Nodes": [
+        {
+            "Name": "MemFreq",
+            "Path": "/sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min",
+            "Values": [
+                "2730000",
+                "421000"
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "CPUMaxFreq",
+            "Path": "/sys/power/cpufreq_max_limit",
+            "Values": [
+                "2730000",
+                "1895537",
+                "-1"
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "CPUMinFreq",
+            "Path": "/sys/power/cpufreq_min_limit",
+            "Values": [
+                "2730000",
+                "2623359",
+                "1930195",
+                "-1"
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "GPUMaxFreq",
+            "Path": "/sys/kernel/gpu/gpu_max_clock",
+            "Values": [
+                "800000",
+                "702000",
+                "455000"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },
+        {
+            "Name": "GPUMinFreq",
+            "Path": "/sys/kernel/gpu/gpu_min_clock",
+            "Values": [
+                "572000",
+                "156000"
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "LpmDisable",
+            "Path": "/sys/power/cstate_control",
+            "Values": [
+                "0",
+                "1"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },
+        {
+            "Name": "AmAppLaunch",
+            "Path": "/sys/kernel/mm/vmscan/am_app_launch",
+            "Values": [
+                "0",
+                "1"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },
+        {
+            "Name": "DoubleTapToWakeEnable",
+            "Path": "/sys/class/sec/tsp/cmd",
+            "Values": [
+                "aot_enable,0",
+                "aot_enable,1"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": false
+        },
+        {
+            "Name": "TouchscreenEnable",
+            "Path": "/sys/class/sec/tsp/input/enabled",
+            "Values": [
+                "1",
+                "0"
+            ],
+            "ResetOnInit": true
+        }
+    ],
+    "Actions": [
+        {
+            "PowerHint": "SUSTAINED_PERFORMANCE",
+            "Node": "CPUMaxFreq",
+            "Duration": 0,
+            "Value": "1895537"
+        },
+        {
+            "PowerHint": "SUSTAINED_PERFORMANCE",
+            "Node": "GPUMaxFreq",
+            "Duration": 0,
+            "Value": "455000"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "MemFreq",
+            "Duration": 2000,
+            "Value": "2730000"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "CPUMinFreq",
+            "Duration": 2000,
+            "Value": "2623359"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "LpmDisable",
+            "Duration": 2000,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "AmAppLaunch",
+            "Duration": 2000,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "CAMERA_LAUNCH",
+            "Node": "MemFreq",
+            "Duration": 1000,
+            "Value": "2730000"
+        },
+        {
+            "PowerHint": "CAMERA_LAUNCH",
+            "Node": "CPUMinFreq",
+            "Duration": 1000,
+            "Value": "2623359"
+        },
+        {
+            "PowerHint": "CAMERA_LAUNCH",
+            "Node": "LpmDisable",
+            "Duration": 1000,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "CAMERA_LAUNCH",
+            "Node": "AmAppLaunch",
+            "Duration": 1000,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "CAMERA_STREAMING_MID",
+            "Node": "LpmDisable",
+            "Duration": 0,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "CAMERA_SHOT",
+            "Node": "CPUMinFreq",
+            "Duration": 1000,
+            "Value": "1930195"
+        },
+        {
+            "PowerHint": "CAMERA_SHOT",
+            "Node": "LpmDisable",
+            "Duration": 1000,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "EXPENSIVE_RENDERING",
+            "Node": "GPUMinFreq",
+            "Duration": 0,
+            "Value": "572000"
+        },
+        {
+            "PowerHint": "EXPENSIVE_RENDERING",
+            "Node": "GPUMaxFreq",
+            "Duration": 0,
+            "Value": "702000"
+        },
+        {
+            "PowerHint": "FIXED_PERFORMANCE",
+            "Node": "CPUMinFreq",
+            "Duration": 0,
+            "Value": "2730000"
+        },
+        {
+            "PowerHint": "INTERACTIVE",
+            "Node": "TouchscreenEnable",
+            "Duration": 0,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "DOUBLE_TAP_TO_WAKE",
+            "Node": "DoubleTapToWakeEnable",
+            "Duration": 0,
+            "Value": "aot_enable,1"
+        }
+    ]
+}
