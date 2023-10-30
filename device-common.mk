@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2023 The evolutionOS Project
+# Copyright (C) 2023 The EvolutionX Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -130,7 +130,7 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor
 
-# evolution Health
+# Evolution Health
 PRODUCT_PACKAGES += \
     vendor.evolution.health-service.default
 
