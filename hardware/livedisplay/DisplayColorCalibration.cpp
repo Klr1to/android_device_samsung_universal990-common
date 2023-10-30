@@ -27,7 +27,7 @@ using android::base::Trim;
 using android::base::WriteStringToFile;
 
 namespace vendor {
-namespace lineage {
+namespace lineage { // i dont know maybe it wont work, if not, u need to change it back to lineage
 namespace livedisplay {
 namespace V2_0 {
 namespace implementation {
